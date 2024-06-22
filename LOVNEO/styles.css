@@ -1,0 +1,296 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-y: scroll; /* Allow scrolling but hide scrollbar */
+}
+header {
+    animation: fadeInTop 1s ease-out;
+    /* Add fade-in-from-top animation */
+}
+
+header .nav-link {
+    transition: color 0.3s ease;
+}
+
+header .nav-link:hover {
+    color: #ffbf00;
+    transform: scale(1.1); /* Change color on hover */
+}
+
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #343a40; /* Dark background color */
+    color: #fff;
+    animation: fadeInTop 1s ease-out; /* Add fade-in-from-top animation */
+    overflow: hidden; /* Hide overflow for scrolling background images */
+}
+
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#home .background-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Twice the width for scrolling effect */
+    height: 100%;
+    display: flex;
+    animation: scrollHorizontal 10s linear infinite; /* Infinite horizontal scroll */
+}
+
+@keyframes scrollHorizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+#home .background-images img {
+    width: 50%; /* Each image takes half the width */
+    height: 100%;
+    object-fit: cover;
+}
+
+.welcome-content {
+    position: relative; /* Relative positioning to be on top of background images */
+    z-index: 1; /* Ensure content is above background images */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
+    width: 100%;
+}
+
+.welcome-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.welcome-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.welcome-content .highlight {
+    color:#865fef;
+     /* Add separate animation */
+}
+
+.welcome-content a {
+    background-color: #060606; /* Yellow button color */
+    border-color: #7d7d7b; /* Yellow button border color */
+    color: #f9fafc; /* Dark text color */
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.welcome-content a:hover {
+    background-color: #aeaa9f; /* Darker yellow button color on hover */
+    border-color: #151515; /* Darker yellow button border color on hover */
+}
+
+@media (min-width: 768px) {
+    .welcome-content h2 {
+        font-size: 4rem;
+    }
+
+    .welcome-content p {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .welcome-content h2 {
+        font-size: 5rem;
+    }
+
+    .welcome-content p {
+        font-size: 2rem;
+    }
+}
+/*service*/
+#services{
+   
+    background: #f6f5f9;
+   
+}
+
+#services .service-box {
+    margin: 1rem 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+#services .service-box:hover {
+    transform: translateY(-10px);
+}
+
+.about-section {
+    padding: 0 0;
+    background-color: #f7f6fa;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+footer {
+    background-color: #beabf1;
+    color: #333;
+    padding: 20px 0;
+}
+
+footer .socials a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333; /* Dark text color for icons */
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transition for color and transform */
+}
+
+footer .socials a:hover {
+    color: #007bff; /* Blue color on hover */
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+
+footer .section-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+/* Adjust margins for smaller screens */
+@media (max-width: 768px) {
+    footer .col {
+        flex: 1 1 100%;
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    footer .socials {
+        margin-top: 20px; /* Add space above social icons */
+    }
+}
+
+
+
+footer .contact-info a {
+    color: #333; /* Dark text color for contact links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Display as block for better spacing */
+    margin-bottom: 5px; /* Space between contact items */
+}
+
+footer .contact-info a:hover {
+    color: #007bff; /* Blue color on hover */
+}
+
+footer .contact-info i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+footer .section-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer .separator {
+    width: 60px;
+    height: 2px;
+    background-color: #7c4dff;
+    margin: 0 auto 20px; /* Center and add bottom margin */
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space out columns */
+}
+
+footer .col {
+    flex: 1;
+    min-width: 200px; /* Minimum width for columns */
+    padding: 10px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Adjust margins for smaller screens */
+@media (max-width: 768px) {
+    footer .col {
+        flex: 1 1 100%;
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    footer .socials {
+        margin-top: 20px; /* Add space above social icons */
+    }
+}
+
+#portfolio{
+ background-color: rgb(217, 231, 250);
+}
+
+.portfolio-item {
+    transition: transform 0.3s ease-in-out;
+    position: relative; /* To position the icon absolutely within this container */
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item .apk-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #111111; /* Yellow color for the icon */
+}
+
+/* Change button color and add animation */
+.btn-primary {
+    background-color: #070707; /* Dark button color */
+    border-color: #070707; /* Dark button border color */
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.btn-primary:hover {
+    background-color: #7d7d7b; /* Slightly lighter dark button color on hover */
+    border-color: #aeaa9f; /* Slightly lighter dark button border color on hover */
+    transform: translateY(-3px); /* Move up on hover */
+}
+
